@@ -51,8 +51,11 @@ int Multiply(std::string numbers, std::string delimiter) {
 			// Gets numbers from the middle of the list
 			if (numbers[i] == startDelim && lastDelim != i) {
 				std::string sub(numbers.begin() + (lastDelim + 1), numbers.begin() + i); // Construct a new string with just the number
-				std::cout << "lastDelim: " << lastDelim << "\t currentIndex: " << i << std::endl;
-				std::cout << "substring: " << sub << "\n";
+				
+				// Output for testing
+				//std::cout << "lastDelim: " << lastDelim << "\t currentIndex: " << i << std::endl;
+				//std::cout << "substring: " << sub << "\n";
+
 				currentNum = std::stoi(sub); 
 				product = product * currentNum;
 				lastDelim = i;
